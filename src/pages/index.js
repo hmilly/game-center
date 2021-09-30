@@ -6,9 +6,7 @@ import mole from "../images/mole.png";
 const IndexPage = () => {
   const [hole, setHole] = useState(true);
 
-  const int = () => {
-    
-  }
+  const int = () => {};
 
   return (
     <Container>
@@ -18,15 +16,42 @@ const IndexPage = () => {
         <p>Get him!</p>
       </header>
       <ul>
-        <li>{hole && <img src={mole} alt="mole" />}</li>
-        <li>{hole && <img src={mole} alt="mole" />}</li>
-        <li>{hole && <img src={mole} alt="mole" />}</li>
-        <li>{hole && <img src={mole} alt="mole" />}</li>
-        <li>{hole && <img src={mole} alt="mole" />}</li>
-        <li>{hole && <img src={mole} alt="mole" />}</li>
-        <li>{hole && <img src={mole} alt="mole" />}</li>
-        <li>{hole && <img src={mole} alt="mole" />}</li>
-        <li>{hole && <img src={mole} alt="mole" />}</li>
+        <li>
+          {hole && <img src={mole} alt="mole" />}
+          <span>🕳️</span>
+        </li>
+        <li>
+          {hole && <img src={mole} alt="mole" />}
+          <span>🕳️</span>
+        </li>
+        <li>
+          {hole && <img src={mole} alt="mole" />}
+          <span>🕳️</span>
+        </li>
+        <li>
+          {hole && <img src={mole} alt="mole" />}
+          <span>🕳️</span>
+        </li>
+        <li>
+          {hole && <img src={mole} alt="mole" />}
+          <span>🕳️</span>
+        </li>
+        <li>
+          {hole && <img src={mole} alt="mole" />}
+          <span>🕳️</span>
+        </li>
+        <li>
+          {hole && <img src={mole} alt="mole" />}
+          <span>🕳️</span>
+        </li>
+        <li>
+          {hole && <img src={mole} alt="mole" />}
+          <span>🕳️</span>
+        </li>
+        <li>
+          {hole && <img src={mole} alt="mole" />}
+          <span>🕳️</span>
+        </li>
       </ul>
     </Container>
   );

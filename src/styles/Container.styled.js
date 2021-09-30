@@ -37,8 +37,8 @@ export const Container = styled.main`
     grid-template-columns: repeat(3, 1fr);
     grid-auto-flow: row;
     list-style-type: none;
-    width: 400px;
-    height: 400px;
+    width: 390px;
+    height: 390px;
     grid-template-areas:
       ". . ."
       ". . ."
@@ -46,18 +46,18 @@ export const Container = styled.main`
     background-color: green;
     padding: 0;
     li {
-      height: auto;
-      border: solid 1px black;
-      padding: 0;
-      margin: 10% 20%;
-      background-color: black;
-      transform: rotate(60deg);
-      border-radius: 80% 20%;
+    position: relative;
+      border: solid black 1px;
       img {
+        position: absolute;
         width: 80px;
         height: auto;
-        padding: 0 0 40px 0;
-        transform: rotate(-60deg);
+        top: 10px;
+        left: 22px;
+      }
+      span {
+        font-size: 90px;
+        margin: 0 auto;
       }
     }
   }
