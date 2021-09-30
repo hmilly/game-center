@@ -4,7 +4,11 @@ import { Container } from "../styles/Container.styled";
 import mole from "../images/mole.png";
 
 const IndexPage = () => {
-  const [hole, setHole] = useState(<img src={mole} alt="mole" />);
+  const [hole, setHole] = useState(true);
+
+  const int = () => {
+    
+  }
 
   return (
     <Container>
@@ -14,17 +18,15 @@ const IndexPage = () => {
         <p>Get him!</p>
       </header>
       <ul>
-        <li>{hole}</li>
-        <li>
-          <img src={mole} alt="mole" />
-        </li>
-        <li>{hole}</li>
-        <li>{hole}</li>
-        <li>{hole}</li>
-        <li>{hole}</li>
-        <li>{hole}</li>
-        <li>{hole}</li>
-        <li>{hole}</li>
+        <li>{hole && <img src={mole} alt="mole" />}</li>
+        <li>{hole && <img src={mole} alt="mole" />}</li>
+        <li>{hole && <img src={mole} alt="mole" />}</li>
+        <li>{hole && <img src={mole} alt="mole" />}</li>
+        <li>{hole && <img src={mole} alt="mole" />}</li>
+        <li>{hole && <img src={mole} alt="mole" />}</li>
+        <li>{hole && <img src={mole} alt="mole" />}</li>
+        <li>{hole && <img src={mole} alt="mole" />}</li>
+        <li>{hole && <img src={mole} alt="mole" />}</li>
       </ul>
     </Container>
   );
