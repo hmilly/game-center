@@ -1,14 +1,6 @@
 import * as React from "react"
+import { Container } from "../styles/Container.styled"
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  height: 800,
-  width: "auto",
-  margin: "0 auto",
-  padding: 0,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
 const headingStyles = {
   height: 60,
   margin: 0,
@@ -24,8 +16,8 @@ const areaStyles = {
   gridTemplateColumns: "repeat(3, 1fr)",
   gridTemplateRows: "repeat(3, 1fr)",
   gridGap: 0,
-  height: 650,
-  width: 650,
+  height: 450,
+  width: 450,
   margin: "0 auto",
   padding: 0,
   backgroundColor: "lightBlue",
@@ -40,30 +32,26 @@ const listStyles = {
   paddingLeft: 0,
 }
 
-// markup
 const IndexPage = () => {
   return (
-    <main style={pageStyles}>
-      <title>Main Page</title>
-      <h1 style={headingStyles}>
-        Whack-a-Mole
-      </h1>
-      <p style={paragraphStyles}>
-        Get him!
-      </p>
-      <ul style={areaStyles}>
-        <li style={liStyle}></li>
-        <li style={liStyle}></li>
-        <li style={liStyle}></li>
-        <li style={liStyle}></li>
-        <li style={liStyle}></li>
-        <li style={liStyle}></li>
-        <li style={liStyle}></li>
-        <li style={liStyle}></li>
-        <li style={liStyle}></li>
+    <Container>
+      <header>
+        <title>Main Page</title>
+        <h1>Whack-a-Mole</h1>
+        <p>Get him!</p>
+      </header>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
       </ul>
-
-    </main>
+    </Container>
   )
 }
 
