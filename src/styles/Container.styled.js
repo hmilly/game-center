@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.main`
-  font-family: "-apple-system, Roboto, sans-serif, serif";
+  font-family: "Roboto, sans-serif, serif";
   width: 90vw;
   height: 90vh;
   margin: 0 auto;
@@ -14,5 +14,4 @@ export const Container = styled.main`
   align-content: center;
   justify-items: center;
   align-items: start;
-
 `;

@@ -27,7 +27,7 @@ export const Header = styled.header`
     font-size: 18px;
   }
   button:hover {
-    transition: padding .1s;
+    transition: padding 0.1s;
     padding: 4px 24px;
     cursor: pointer;
   }
