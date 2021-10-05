@@ -1,16 +1,13 @@
 import * as React from "react";
-import Layout from "../components/Layout"
-import { Main } from "../styles/Main.styled";
+import Layout from "../components/Layout";
 
 const IndexPage = () => {
   return (
-    <Main>
+    <Layout>
       <div>
         <h1>Retro games</h1>
       </div>
-      <Layout />
-      
-    </Main>
+    </Layout>
   );
 };
 

@@ -1,19 +1,27 @@
 import styled from "styled-components";
 
 export const Nav = styled.ul`
-display: grid;
-grid-template-columns: 1fr;
-grid-template-rows:auto;
-grid-column-gap: 0px;
-grid-row-gap: 10px;
-grid-auto-flow: row;
-border: solid 1px blue;
-list-style-type: none;
+  width: 100%;
+  height: 100%;
+  list-style-type: none;
+  padding: 0;
+  margin: 10px;
 
-a{
+  li {
+    width: 170px;
+    height: 40px;
+  }
+  li:hover {
+    cursor: pointer;
+    a {
+      font-weight: 600;
+    }
+  }
+  a {
+    display: block;
+    height: 100%;
+    width: 100%;
     font-size: 18px;
-}
-a:hover{
-    font-size: 19px;
-}
-`
+    margin: 0;
+  }
+`;

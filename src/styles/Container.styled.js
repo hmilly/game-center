@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
-export const Container = styled.main`
-  font-family: "Roboto, sans-serif, serif";
-  width: 90vw;
-  height: 90vh;
+export const Container = styled.div`
+ width: 100%;
+ height: 100%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
@@ -14,4 +13,5 @@ export const Container = styled.main`
   align-content: center;
   justify-items: center;
   align-items: start;
+  border: solid 1px blue;
 `;
