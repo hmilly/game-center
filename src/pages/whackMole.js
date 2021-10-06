@@ -1,11 +1,9 @@
 import * as React from "react";
-import { useState } from "react";
-import { Container } from "../styles/Container.styled";
-import { Header } from "../styles/Header.styled";
-import { Ul } from "../styles/Ul.styled";
-import Mole from "../components/Mole";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
+import { Container, Header } from "../styles/Game.details.styled";
+import { Ul } from "../styles/Game.content.styled";
 import Layout from "../components/Layout"
+import Mole from "../components/Mole";
 
 const IndexPage = () => {
   const [start, setStart] = useState(false);
@@ -19,7 +17,6 @@ const IndexPage = () => {
     <Layout>
       <Container>
         <Header>
-          <title>Main Page</title>
           <h1>Whack-a-Mole</h1>
           <p>Get him!</p>
           <button onClick={() => setStart(!start)}>

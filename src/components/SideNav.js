@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { Nav } from '../styles/Nav.styled'
+import { Nav } from '../styles/Main.styled'
 
 const SideNav = () => {
     return (

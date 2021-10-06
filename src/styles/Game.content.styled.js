@@ -33,3 +33,28 @@ export const Ul = styled.ul`
     }
   }
 `;
+
+export const Grid = styled.body`
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-flow: row;
+  align-items: center;
+  justify-items: center;
+
+div{
+  padding: 15px;
+  width: 300px;
+  height: 300px;
+  border: solid 1px black;
+}
+h3{
+  text-align: center;
+}
+img{
+  width: 100%;
+  height: auto;
+}
+`
