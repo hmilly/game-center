@@ -5,7 +5,7 @@ import { Ul } from "../styles/Game.content.styled";
 import Layout from "../components/Layout"
 import Mole from "../components/Mole";
 
-const IndexPage = () => {
+const WhackMole = () => {
   const [start, setStart] = useState(false);
   const [count, setCount] = useState(0);
 
@@ -16,7 +16,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <Container>
-        <Header>
+        <Header btnCol={start ? "red" : "lightgreen"}>
           <h1>Whack-a-Mole</h1>
           <p>Get him!</p>
           <button onClick={() => setStart(!start)}>
@@ -40,4 +40,4 @@ const IndexPage = () => {
   );
 };
 
-export default IndexPage;
+export default WhackMole;

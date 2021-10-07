@@ -11,9 +11,9 @@ const SideNav = () => {
             <li>
                 <Link to="/whackMole">Whack-a-Mole</Link>
             </li>
-            {/* <li>
-                <Link to="/snake">snake</Link>
-            </li> */}
+            <li>
+                <Link to="/snake">Snake</Link>
+            </li>
         </Nav>
 
     )

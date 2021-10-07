@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
-    title: "whack-a-mole",
+    title: "Game-center",
   },
   plugins: ["gatsby-plugin-styled-components"],
 };

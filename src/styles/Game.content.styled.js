@@ -34,9 +34,9 @@ export const Ul = styled.ul`
   }
 `;
 
-export const Grid = styled.body`
+export const Grid = styled.div`
   width: 100%;
-  height: 100%;
+  height: 660px;
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(2, 1fr);
@@ -47,11 +47,14 @@ export const Grid = styled.body`
 div{
   padding: 15px;
   width: 300px;
-  height: 300px;
-  border: solid 1px black;
+  height: 330px;
+  background-color: rgba(1, 50, 67, 0.6);
+  border: solid 1px rgba(1, 50, 67);
+  border-radius: 4px;
 }
 h3{
   text-align: center;
+  color: peachpuff;
 }
 img{
   width: 100%;

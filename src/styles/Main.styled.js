@@ -1,21 +1,18 @@
 import styled from "styled-components";
+import img from "../images/games.jpg"
 
 export const Main = styled.main`
-  * {
-    font-family: "Gill Sans", sans-serif, serif;
-  }
-
   display: grid;
   grid-template-columns: 180px 1fr;
   grid-template-rows: 95vh;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   grid-auto-flow: row;
-  border: solid 1px red;
   justify-items: center;
-
+  background-image: url(${img}) ;
+  background-size: cover;
+  
   h1 {
-    color: blue;
     text-align: center;
   }
 `;
@@ -24,17 +21,18 @@ export const Nav = styled.ul`
   width: 100%;
   height: 100%;
   list-style-type: none;
-  padding: 0;
-  margin: 10px;
+  margin: 0;
+  padding: 10px;
 
   li {
-    width: 170px;
+    width: 100%;
     height: 40px;
+    margin: 8px 0;
   }
   li:hover {
     cursor: pointer;
     a {
-      font-weight: 600;
+      background-color: rgba(174, 174, 174, 0.3);
     }
   }
   a {
@@ -42,6 +40,8 @@ export const Nav = styled.ul`
     height: 100%;
     width: 100%;
     font-size: 18px;
-    margin: 0;
+    margin: 0 auto;
+    padding: 10px;
+    color: yellow;
   }
 `;

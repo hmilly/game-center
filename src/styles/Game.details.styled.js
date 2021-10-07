@@ -12,9 +12,7 @@ export const Container = styled.div`
   justify-content: center;
   align-content: center;
   justify-items: center;
-  align-items: start;
-  border: solid 1px blue;
-  background-image: url(../images/games.jpg);
+  align-items: center;
 `;
 
 export const Header = styled.header`
@@ -30,29 +28,34 @@ export const Header = styled.header`
   align-content: center;
   justify-items: center;
   align-items: center;
+  h1{
+    color: peachpuff;
+  }
   p {
     font-size: 20px;
     margin: 0;
+    text-align: center;
   }
   button {
     height: auto;
     border: solid 1px red;
     padding: 2px 20px;
-    border: solid 3px blue;
-    background-color: white;
-    color: blue;
+    border: solid 3px lightblue;
+    background-color: black;
+    color: ${({ btnCol }) => btnCol};
     font-size: 18px;
   }
   button:hover {
     transition: padding 0.1s;
     padding: 4px 24px;
     cursor: pointer;
+    font-size: 20px;
   }
   button:active {
     border: solid 3px black;
     color: black;
     padding: 0 18px;
-    background-color: lightyellow;
+    background-color: lightblue;
   }
 `;
 

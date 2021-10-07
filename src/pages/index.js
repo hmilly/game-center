@@ -11,7 +11,10 @@ const IndexPage = () => {
       <Container>
         <Header>
           <h1>Retro games</h1>
-          <p>Welcome! View available games below</p>
+          <p>
+            Welcome! View available games below<br />
+            use bar on your left to navigate
+          </p>
         </Header>
         <Grid>
           <div>
