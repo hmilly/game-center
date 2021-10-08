@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import mole from "../images/mole.png";
 
-const Mole = ({ count, setCount, start }) => {
+const Mole = ({ count, setCount, start, timer }) => {
   const [t, setT] = useState(0);
 
   const timeout = () => Math.round(Math.random() * (2000 - 200) + 500);
