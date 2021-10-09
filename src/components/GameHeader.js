@@ -3,25 +3,17 @@ import { useState, useEffect } from "react";
 import { Header } from "../styles/Game.details.styled";
 
 const GameHeader = ({ name, text, start, setStart, count }) => {
-    const [countdown, setCountdown] = useState(10)
+    const [countdown, setCountdown] = useState(60)
 
-const cd = () => setCountdown(countdown - 1)
     useEffect(() => {
-        
-
-
         if (start && countdown > 0) {
-            setInterval(() => {
-                cd()
-            }, 1000);
-
-        } else if (!start || countdown === 0){
-            setCountdown(10)
-            clearInterval(cd);
-            setStart(!start)
+            setTimeout(() => setCountdown(countdown - 1), 1000);
+        } else if (!start || countdown === 0) {
+            setCountdown(60)
+            setStart(false)
         }
-
     })
+
 
     return (
         <Header btnCol={start ? "red" : "lightgreen"}>
@@ -30,8 +22,13 @@ const cd = () => setCountdown(countdown - 1)
             <button onClick={() => setStart(!start)}>
                 {start ? "Stop game" : "Start game"}
             </button>
-            <p>Score: {count}</p>
-            <p>Timer: {countdown}</p>
+            <div>
+                <p>Count:</p>
+                <p>{countdown}</p>
+                <p>Score:</p>
+                <p>{count}</p>
+            </div>
+
         </Header>
     )
 }

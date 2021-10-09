@@ -17,10 +17,10 @@ export const Container = styled.div`
 
 export const Header = styled.header`
   width: 100%;
-  height: 200px;
+  height: 300px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 0.5fr 3fr;
+  grid-template-rows: 1fr 0.5fr 1fr 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   grid-auto-flow: row;
@@ -56,6 +56,24 @@ export const Header = styled.header`
     color: black;
     padding: 0 18px;
     background-color: lightblue;
+  }
+  div{
+    width: 50%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    grid-auto-flow: row;
+    align-items: center;
+    p :nth-child(even){
+      font-size: 24px;
+      font-weight: 700;
+      justify-self: start;
+      color: lightcoral;
+      text-shadow: 3px 2px blue;
+    }
   }
 `;
 
