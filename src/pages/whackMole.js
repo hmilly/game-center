@@ -1,10 +1,10 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
+import { Ul } from "../styles/Game.content.styled";
+import { Container } from "../styles/Game.details.styled";
 import Layout from "../components/Layout"
 import Mole from "../components/Mole";
 import GameHeader from "../components/GameHeader";
-import { Ul } from "../styles/Game.content.styled";
-import { Container } from "../styles/Game.details.styled";
 
 const WhackMole = () => {
   const [start, setStart] = useState(false);
