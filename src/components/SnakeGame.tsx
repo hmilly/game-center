@@ -1,6 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
-import { PlayArea } from "../styles/Game.content.styled"
-//import pie from "../images/pie.jpg";
+import { Container } from "../styles/Game.details.styled";
+import Layout from "../components/Layout"
+import GameHeader from "../components/GameHeader";
+import { PlayArea } from "../styles/Game.content.styled";
+import pieImg from "../images/pie.jpg";
 import useInterval from "../fns/snakeFns";
 
 const canvasX = 1000;
@@ -13,14 +16,25 @@ const initPie = [14, 10];
 const scale = 50;
 const timeDelay = 100;
 
-const SnakeGame = () => {
+const SnakeGame = ({
+  ...props
+}: {
+  count: number;
+  setCount: (count: number) => void;
+  start: boolean;
+}) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const [snake, setSnake] = useState(initSnake);
   const [pie, setPie] = useState(initPie);
   const [direction, setDirection] = useState([0, -1]);
   const [delay, setDelay] = useState<number | null>(null);
-  const [gameOver, setGameOver] = useState(false);
-  const [score, setScore] = useState(0);
+ // const [score, setScore] = useState<Istate["score"]>(0);
+
+  useEffect(() => {
+    if (props.start) props.setCount(0);
+  }, [props.start]);
+
+
 
   useInterval(() => runGame(), delay);
 
@@ -34,23 +48,23 @@ const SnakeGame = () => {
         ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
         ctx.fillStyle = "#004602";
         snake.forEach(([x, y]) => ctx.fillRect(x, y, 1, 1));
-        // ctx.drawImage(food, pie[0], pie[1], 1, 1);
+        ctx.drawImage(food, pie[0], pie[1], 1, 1);
       }
     }
-  }, [snake, pie, gameOver]);
+  }, [snake, pie, props.start]);
 
   const play = () => {
     setSnake(initSnake);
     setPie(initPie);
     setDirection([1, 0]);
     setDelay(timeDelay);
-    setScore(0);
-    setGameOver(false);
+    props.setCount(0);
+    // setStart(true);
   };
 
   const checkCollision = (head: number[]) => {
-    // head.map((coord) => coord < 0 || coord * scale >= canvasX) ||
-    // snake.map((s) => head[0] === s[0] && head[1] === s[1])
+    head.map((coord) => coord < 0 || coord * scale >= canvasX) ||
+      snake.map((s) => head[0] === s[0] && head[1] === s[1]);
     for (let i = 0; i < head.length; i++) {
       if (head[i] < 0 || head[i] * scale >= canvasX) return true;
     }
@@ -64,7 +78,7 @@ const SnakeGame = () => {
     let coord = pie.map(() => Math.floor((Math.random() * canvasX) / scale));
     if (newSnake[0][0] === pie[0] && newSnake[0][1] === pie[1]) {
       let newPie = coord;
-      setScore(score + 5);
+      props.setCount(props.count + 5);
       setPie(newPie);
       return true;
     }
@@ -80,7 +94,7 @@ const SnakeGame = () => {
     newSnake.unshift(newSnakeHead);
     if (checkCollision(newSnakeHead)) {
       setDelay(null);
-      setGameOver(true);
+      //setStart(false);
     }
     if (!pieAte(newSnake)) {
       newSnake.pop();
@@ -106,17 +120,18 @@ const SnakeGame = () => {
   };
 
   return (
+
     <PlayArea
       onKeyDown={(e: React.KeyboardEvent<HTMLDivElement>) => changeDirection(e)}
     >
-      {/* <img id="food" src={pie} alt="food" width="0" /> */}
+      <img id="food" src={pieImg} alt="food" width="0" />
       <canvas ref={canvasRef} width={`${canvasX}px`} height={`${canvasY}px`} />
-      {gameOver && <p>Game Over!</p>}
-      <button onClick={play}>Start</button>
+      {!props.start && <p>Game Over!</p>}
       <div>
-        <h2>Score: {score}</h2>
+        <h2>Score: {props.count}</h2>
       </div>
     </PlayArea>
+
   );
 };
 

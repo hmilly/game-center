@@ -63,26 +63,32 @@ export const Grid = styled.div`
 `;
 
 export const PlayArea = styled.div`
-  font-family: "Press Start 2P", "Arial", sans-serif;
+
+display: grid;
+  grid-template-rows: 0.2fr 1fr 0.2fr;
+  grid-template-columns: 0.2fr 1fr 0.2fr;
+  grid-auto-flow: row;
+  list-style-type: none;
   width: 600px;
-  height: 500px;
-  position: fixed;
+  height: 400px;
+
+  font-family: "Press Start 2P", "Arial", sans-serif;
+
   background-color: white;
 
   canvas {
     width: 600px;
-    height: 500px;
+    height: 400px;
     border: solid purple 1px;
   }
 
   p {
-
     color: black;
     font-size: 35px;
   }
 
   button {
-    position: fixed;
+
     top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
