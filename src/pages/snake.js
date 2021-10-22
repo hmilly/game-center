@@ -23,7 +23,12 @@ const Snake = () => {
           setStart={setStart}
           count={count}
         />
-        <SnakeGame count={count} setCount={setCount} start={start} />
+        <SnakeGame
+          count={count}
+          setCount={setCount}
+          start={start}
+          setStart={setStart}
+        />
       </Container>
     </Layout>
   );

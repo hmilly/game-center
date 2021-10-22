@@ -63,56 +63,32 @@ export const Grid = styled.div`
 `;
 
 export const PlayArea = styled.div`
-
-display: grid;
+  display: grid;
   grid-template-rows: 0.2fr 1fr 0.2fr;
   grid-template-columns: 0.2fr 1fr 0.2fr;
   grid-auto-flow: row;
   list-style-type: none;
   width: 600px;
   height: 400px;
-
   font-family: "Press Start 2P", "Arial", sans-serif;
 
-  background-color: white;
-
   canvas {
+    margin: 0;
     width: 600px;
     height: 400px;
-    border: solid purple 1px;
+    background-color: rgba(0, 0, 205, 0.8);
+    border-radius: 5px;
+    border: solid white 2px;
   }
 
   p {
-    color: black;
-    font-size: 35px;
-  }
-
-  button {
-
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 400px;
+    height: 30px;
     color: white;
-    background: #9f59f5;
-    border: 2px solid white;
-    padding: 10px 20px;
-    font-size: 16px;
-    color: white;
-    box-shadow: 4px 4px 0px 0px white;
-    font-weight: 800;
-    letter-spacing: 5px;
-    cursor: pointer;
-  }
-  div {
-    float: right;
-    margin: 30px;
-    margin-top: 50px;
-    -webkit-box-shadow: 0px 4px 13px 0px rgba(48, 26, 74, 0.63);
-    box-shadow: 0px 4px 13px 0px rgba(48, 26, 74, 0.63);
-
-    h2 {
-      font-size: 18px;
-      padding: 10px;
-    }
+    text-align: center;
+    margin: 100px;
+    font-weight: 700;
+    font-size: 25px;
   }
 `;
