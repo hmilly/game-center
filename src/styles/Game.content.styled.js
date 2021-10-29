@@ -62,7 +62,12 @@ export const Grid = styled.div`
   }
 `;
 
-export const PlayArea = styled.div`
+export const PlayArea = styled.section`
+  width: 600px;
+  height: 400px;
+  font-family: "Press Start 2P", "Arial", sans-serif;
+
+  div{
   display: grid;
   grid-template-rows: 0.2fr 1fr 0.2fr;
   grid-template-columns: 0.2fr 1fr 0.2fr;
@@ -70,7 +75,6 @@ export const PlayArea = styled.div`
   list-style-type: none;
   width: 600px;
   height: 400px;
-  font-family: "Press Start 2P", "Arial", sans-serif;
 
   canvas {
     margin: 0;
@@ -81,7 +85,7 @@ export const PlayArea = styled.div`
     border: solid white 2px;
   }
 
-  p {
+  h2{
     position: absolute;
     width: 400px;
     height: 30px;
@@ -89,6 +93,8 @@ export const PlayArea = styled.div`
     text-align: center;
     margin: 100px;
     font-weight: 700;
-    font-size: 25px;
+    font-size: 40px;
   }
+  }
+
 `;

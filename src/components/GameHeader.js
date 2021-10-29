@@ -23,7 +23,7 @@ const GameHeader = ({ name, text, start, setStart, count }) => {
                 {start ? "Stop game" : "Start game"}
             </button>
             <div>
-                <p>Count:</p>
+                <p>Time remaining:</p>
                 <p>{countdown}</p>
                 <p>Score:</p>
                 <p>{count}</p>

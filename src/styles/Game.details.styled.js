@@ -58,10 +58,10 @@ export const Header = styled.header`
     background-color: lightblue;
   }
   div{
-    width: 50%;
+    width: 60%;
     height: 100%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr 0.2fr 1fr 0.2fr;
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
@@ -70,7 +70,6 @@ export const Header = styled.header`
     p :nth-child(even){
       font-size: 24px;
       font-weight: 700;
-      justify-self: start;
       color: lightcoral;
       text-shadow: 3px 2px blue;
     }

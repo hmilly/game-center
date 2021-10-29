@@ -26,19 +26,14 @@ const SnakeGame = ({ count, setCount, start, setStart }: IProps) => {
   const [pie, setPie] = useState(initPie);
   const [direction, setDirection] = useState([0, -1]);
   const [delay, setDelay] = useState<number | null>(null);
-  const [losemsg, setLosemsg] = useState<string | null>("");
+  const [lostGame, setLostGame] = useState<Boolean>(false)
 
   useEffect(() => {
     if (start) {
       play();
     } else {
-      setCount(0);
       setDelay(null);
       setStart(false);
-      setSnake(initSnake);
-      setPie(initPie);
-      setDirection([1, 0]);
-      setLosemsg("");
     }
   }, [start]);
 
@@ -83,10 +78,12 @@ const SnakeGame = ({ count, setCount, start, setStart }: IProps) => {
   };
 
   const play = () => {
-    setDelay(timeDelay);
     setSnake(initSnake);
     setPie(initPie);
     setDirection([1, 0]);
+    setDelay(timeDelay);
+    setLostGame(false)
+    setCount(0);
   };
 
   const runGame = () => {
@@ -99,7 +96,7 @@ const SnakeGame = ({ count, setCount, start, setStart }: IProps) => {
     if (checkCollision(newSnakeHead)) {
       setDelay(null);
       setStart(false);
-      setLosemsg("Game over!");
+      setLostGame(true)
     }
     if (!pieAte(newSnake)) {
       newSnake.pop();
@@ -107,7 +104,8 @@ const SnakeGame = ({ count, setCount, start, setStart }: IProps) => {
     setSnake(newSnake);
   };
 
-  const changeDirection = (e: React.KeyboardEvent<HTMLDivElement>) => {
+  const changeDirection = (e: React.KeyboardEvent<HTMLDivElement>)  => {
+    console.log(e, "run");
     switch (e.key) {
       case "ArrowLeft":
         setDirection([-1, 0]);
@@ -125,12 +123,16 @@ const SnakeGame = ({ count, setCount, start, setStart }: IProps) => {
   };
 
   return (
-    <PlayArea
-      onKeyDown={(e: React.KeyboardEvent<HTMLDivElement>) => changeDirection(e)}
-    >
-      <img id="food" src={pieImg} alt="food" width="0" />
-      <canvas ref={canvasRef} width={`${canvasX}px`} height={`${canvasY}px`} />
-      <p>{losemsg}</p>
+    <PlayArea>
+      <div onKeyDown={changeDirection}>
+        <img id="food" src={pieImg} alt="food" width="0" />
+        <canvas
+          ref={canvasRef}
+          width={`${canvasX}px`}
+          height={`${canvasY}px`}
+        />
+        <h2>{lostGame && "Oh no, you lose!"}</h2>
+      </div>
     </PlayArea>
   );
 };
