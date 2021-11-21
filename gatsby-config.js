@@ -4,4 +4,5 @@ module.exports = {
     title: "Game-center",
   },
   plugins: ["gatsby-plugin-styled-components"],
+  pathPrefix: "/game-center",
 };
