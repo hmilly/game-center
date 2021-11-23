@@ -36,7 +36,7 @@ export const Ul = styled.ul`
 
 export const Grid = styled.div`
   width: 100%;
-  height: 660px;
+  height: 330px;
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(2, 1fr);
