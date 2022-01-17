@@ -6,6 +6,8 @@ export const Ul = styled.ul`
   grid-template-columns: repeat(3, 1fr);
   grid-auto-flow: row;
   list-style-type: none;
+  justify-self: center;
+  align-self: center;
   width: 390px;
   height: 390px;
   grid-template-areas:
@@ -35,30 +37,30 @@ export const Ul = styled.ul`
 `;
 
 export const Grid = styled.div`
-  width: 100%;
-  height: 330px;
   display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-columns: repeat(2, 1fr);
-  grid-auto-flow: row;
+  grid-template-rows: repeat(auto-fill, minmax(100px, 330px));
+  grid-template-columns: 1fr;
   align-items: center;
   justify-items: center;
 
-  div {
+  a {
     padding: 15px;
     width: 300px;
-    height: 330px;
+    height: auto;
     background-color: rgba(1, 50, 67, 0.6);
     border: solid 1px rgba(1, 50, 67);
     border-radius: 4px;
-  }
-  h3 {
-    text-align: center;
-    color: peachpuff;
-  }
-  img {
-    width: 100%;
-    height: auto;
+    h2 {
+      text-align: center;
+      color: peachpuff;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+    p {
+      text-shadow: none;
+    }
   }
 `;
 
@@ -67,34 +69,33 @@ export const PlayArea = styled.section`
   height: 400px;
   font-family: "Press Start 2P", "Arial", sans-serif;
 
-  div{
-  display: grid;
-  grid-template-rows: 0.2fr 1fr 0.2fr;
-  grid-template-columns: 0.2fr 1fr 0.2fr;
-  grid-auto-flow: row;
-  list-style-type: none;
-  width: 600px;
-  height: 400px;
-
-  canvas {
-    margin: 0;
+  div {
+    display: grid;
+    grid-template-rows: 0.2fr 1fr 0.2fr;
+    grid-template-columns: 0.2fr 1fr 0.2fr;
+    grid-auto-flow: row;
+    list-style-type: none;
     width: 600px;
     height: 400px;
-    background-color: rgba(0, 0, 205, 0.8);
-    border-radius: 5px;
-    border: solid white 2px;
-  }
 
-  h2{
-    position: absolute;
-    width: 400px;
-    height: 30px;
-    color: white;
-    text-align: center;
-    margin: 100px;
-    font-weight: 700;
-    font-size: 40px;
-  }
-  }
+    canvas {
+      margin: 0;
+      width: 600px;
+      height: 400px;
+      background-color: rgba(0, 0, 205, 0.8);
+      border-radius: 5px;
+      border: solid white 2px;
+    }
 
+    h2 {
+      position: absolute;
+      width: 400px;
+      height: 30px;
+      color: white;
+      text-align: center;
+      margin: 100px;
+      font-weight: 700;
+      font-size: 40px;
+    }
+  }
 `;

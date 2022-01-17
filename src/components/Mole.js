@@ -13,7 +13,6 @@ const Mole = ({ count, setCount, start }) => {
       setTimeout(() => {
         setT(time);
       }, [time + 2000]);
-
     } else if (start) {
       const time = timeout();
       setTimeout(() => {

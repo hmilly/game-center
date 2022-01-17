@@ -2,16 +2,11 @@ import styled from "styled-components";
 import img from "../images/games.jpg"
 
 export const Main = styled.main`
-  display: grid;
-  grid-template-columns: 180px 1fr;
-  grid-template-rows: 95vh;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  grid-auto-flow: row;
-  justify-items: center;
+height: 100vh;
+width: 100vw;
   background-image: url(${img}) ;
   background-size: cover;
-  
+  overflow: hidden;
   h1 {
     text-align: center;
   }

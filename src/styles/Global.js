@@ -5,6 +5,7 @@ export const GlobalStyles = createGlobalStyle`
     font-family: "Gill Sans", sans-serif, serif;
     color: white;
     box-sizing: border-box;
+    margin: 0;
 }
 
 p, h1, h3{
